@@ -8,6 +8,7 @@
 #include <fstream>
 
 int counter;
+int playerAttack = 1; 
 
 static const float VIEW_HEIGHT = 600.0F;
 
@@ -24,27 +25,70 @@ int stateChange = 0;
 //int x;
 //int x = rand() % 9;
 
-int x;
-unsigned int y;
+int PXbox1B2;
+unsigned int PYbox1B2;
+
+int PXredplus1B2;
+unsigned int PYredplus1B2;
+
+int PXgreenplus1B3;
+unsigned int PYgreenplus1B3;
+
+
 int randombox1B2X()
 {
-	int randombox1B1objX[8] = { 288,320,352,384,416,448,480,512 };
+	int randombox1B2objX[8] = { 288,320,352,384,416,448,480,512 };
 
-	x = rand() % 8;
-	return randombox1B1objX[x];
+	PXbox1B2 = rand() % 8;
+	return randombox1B2objX[PXbox1B2];
 }
 
 int randombox1B2Y()
 {
-	int randombox1B1objY[9] = { -1416,-1384,-1352,-1320,-1288,-1256,-1224,-1192 };
+	int randombox1B2objY[9] = { -1416,-1384,-1352,-1320,-1288,-1256,-1224,-1192 };
 	
-	y = rand() % 9 ;
-	return randombox1B1objY[y];
-	if (y == x)
-	{
-		y = rand() % 9;
-	}
+	PYbox1B2 = rand() % 9 ;
+	return randombox1B2objY[PYbox1B2];
+	
 }
+
+
+int randomredplus1B2X()
+{
+	int randomredplus1B2objX[8] = { 288,320,352,384,416,448,480,512 };
+
+	PXredplus1B2 = rand() % 8;
+	return randomredplus1B2objX[PXredplus1B2];
+}
+
+int randomredplus1B2Y()
+{
+	int randomredplus1B2objY[9] = { -1416,-1384,-1352,-1320,-1288,-1256,-1224,-1192 };
+
+	PYredplus1B2 = rand() % 9;
+	return randomredplus1B2objY[PYredplus1B2];
+	
+}
+
+
+int randomgreenplus1B3X()
+{
+	int randomgreenplus1B3objX[14] = { 288,320,352,384,416,448,480,512 };
+
+	PXgreenplus1B3 = rand() % 14;
+	return randomgreenplus1B3objX[PXgreenplus1B3];
+}
+
+int randomgreenplus1B3Y()
+{
+	int randomredplus1B2objY[2] = { -1416,-1384 };
+
+	PYredplus1B2 = rand() % 2;
+	return randomredplus1B2objY[PYredplus1B2];
+
+}
+
+
 
 int mode = 1;
 
@@ -53,20 +97,30 @@ int main()
 	srand(time(NULL));
 	printf("value from function %d\n", randombox1B2X());
 	printf("value from function %d", randombox1B2Y());
-	printf("value from function %d", x);
-	printf("value from function %d", y);
+	
+	printf("value from function %d\n", randomredplus1B2X());
+	printf("value from function %d", randomredplus1B2Y());
+
+	//printf("value from function %d", x);
+//	printf("value from function %d", y);
 	//printf("%d\n",x);
 	//printf("%d", randombox1B1objX[x]);
 
 	
+	sf::RectangleShape menuPicobj;
+	sf::Texture menuPicobjTexture;
+	if (!menuPicobjTexture.loadFromFile("menuPic.png")) cout << "sscasca" << endl;
+	menuPicobj.setTexture(&menuPicobjTexture);
+	menuPicobj.setSize(sf::Vector2f(600,600));
+	menuPicobj.setOrigin(0.0f,0.0f);
 
 	vector<Wall>::const_iterator iter15;
 	vector<Wall> wallArray;
 
-	class Wall wall1;
-	wall1.rect.setPosition(-64, -64);
+	//class Wall wall1;
+	//wall1.rect.setPosition(-64, -64);
 
-	wallArray.push_back(wall1);
+	//wallArray.push_back(wall1);
 
 	sf::RenderWindow window(sf::VideoMode(544, 416), "Svival", sf::Style::Close | sf::Style::Resize);
 	window.setFramerateLimit(70);
@@ -108,7 +162,7 @@ int main()
 
 	Wall downB1;
 	downB1.rect.setSize(sf::Vector2f{608,32});
-	downB1.rect.setFillColor(sf::Color::White);
+	downB1.rect.setFillColor(sf::Color(190, 190, 190));
 	downB1.rect.setPosition(sf::Vector2f{ -32,450 });
 	wallArray.push_back(downB1);
 
@@ -116,14 +170,14 @@ int main()
 
 	Wall leftB1;
 	leftB1.rect.setSize(sf::Vector2f{ 32,448 });
-	leftB1.rect.setFillColor(sf::Color::White);
+	leftB1.rect.setFillColor(sf::Color(190, 190, 190));
 	leftB1.rect.setPosition(sf::Vector2f{ -32,0 });
 	wallArray.push_back(leftB1);
 	
 
 	Wall rightB1;
 	rightB1.rect.setSize(sf::Vector2f{ 32,448 });
-	rightB1.rect.setFillColor(sf::Color::White);
+	rightB1.rect.setFillColor(sf::Color(190, 190, 190));
 	rightB1.rect.setPosition(sf::Vector2f{ 544,0 });
 	wallArray.push_back(rightB1);
 
@@ -137,6 +191,21 @@ int main()
 	);
 	background2.setTexture(&backgroundTexture2);
 	background2.setPosition(0.0f, -1448.f);
+
+
+
+
+	/////
+	sf::RectangleShape warpPoint2;
+	warpPoint2.setPosition(512.f, -1413.f);
+	warpPoint2.setSize({ 32.f, 2.f });
+	warpPoint2.setFillColor(sf::Color::Transparent);
+	warpPoint2.setOutlineColor(sf::Color::Red);
+	warpPoint2.setOutlineThickness(-1.f);
+	/////
+
+
+
 
 	/*WALL*/
 	Wall wallB2obj;
@@ -155,7 +224,7 @@ int main()
 
 	Wall downB2;
 	downB2.rect.setSize(sf::Vector2f{ 608,32 });
-	downB2.rect.setFillColor(sf::Color::White);
+	downB2.rect.setFillColor(sf::Color(190, 190, 190));
 	downB2.rect.setPosition(sf::Vector2f{ -32,-1000 });
 	wallArray.push_back(downB2);
 
@@ -163,14 +232,14 @@ int main()
 
 	Wall leftB2;
 	leftB2.rect.setSize(sf::Vector2f{ 32,416 });
-	leftB2.rect.setFillColor(sf::Color::White);
+	leftB2.rect.setFillColor(sf::Color(190, 190, 190));
 	leftB2.rect.setPosition(sf::Vector2f{ -32,-1416 });
 	wallArray.push_back(leftB2);
 
 
 	Wall rightB2;
 	rightB2.rect.setSize(sf::Vector2f{ 32,416 });
-	rightB2.rect.setFillColor(sf::Color::White);
+	rightB2.rect.setFillColor(sf::Color(190, 190, 190));
 	rightB2.rect.setPosition(sf::Vector2f{ 544,-1416 });
 	wallArray.push_back(rightB2);
 
@@ -189,6 +258,19 @@ int main()
 	background3.setTexture(&backgroundTexture3);
 	background3.setPosition(0.0f, -2896.f);
 
+
+	/////
+	sf::RectangleShape warpPoint3;
+	warpPoint3.setPosition(512.f, -2860.f);
+	warpPoint3.setSize({ 32.f, 2.f });
+	warpPoint3.setFillColor(sf::Color::Transparent);
+	warpPoint3.setOutlineColor(sf::Color::Red);
+	warpPoint3.setOutlineThickness(-1.f);
+	/////
+
+
+
+
 	/*WALL*/
 	Wall wallB3obj;
 	sf::Texture wallB3objTexture;
@@ -206,7 +288,7 @@ int main()
 
 	Wall downB3;
 	downB3.rect.setSize(sf::Vector2f{ 608,32 });
-	downB3.rect.setFillColor(sf::Color::White);
+	downB3.rect.setFillColor(sf::Color(190, 190, 190));
 	downB3.rect.setPosition(sf::Vector2f{ -32,-2448 });
 	wallArray.push_back(downB3);
 
@@ -214,14 +296,14 @@ int main()
 
 	Wall leftB3;
 	leftB3.rect.setSize(sf::Vector2f{ 32,416 });
-	leftB3.rect.setFillColor(sf::Color::White);
+	leftB3.rect.setFillColor(sf::Color(190, 190, 190));
 	leftB3.rect.setPosition(sf::Vector2f{ -32,-2864 });
 	wallArray.push_back(leftB3);
 
 
 	Wall rightB3;
 	rightB3.rect.setSize(sf::Vector2f{ 32,416 });
-	rightB3.rect.setFillColor(sf::Color::White);
+	rightB3.rect.setFillColor(sf::Color(190, 190, 190));
 	rightB3.rect.setPosition(sf::Vector2f{ 544,-2864 });
 	wallArray.push_back(rightB3);
 
@@ -238,6 +320,7 @@ int main()
 	);
 	background4.setTexture(&backgroundTexture4);
 	background4.setPosition(0.0f, -4344.f);
+
 
 
 
@@ -258,7 +341,7 @@ int main()
 
 	Wall downB4;
 	downB4.rect.setSize(sf::Vector2f{ 608,32 });
-	downB4.rect.setFillColor(sf::Color::White);
+	downB4.rect.setFillColor(sf::Color(190, 190, 190));
 	downB4.rect.setPosition(sf::Vector2f{ -32,-3896 });
 	wallArray.push_back(downB4);
 
@@ -266,16 +349,69 @@ int main()
 
 	Wall leftB4;
 	leftB4.rect.setSize(sf::Vector2f{ 32,416 });
-	leftB4.rect.setFillColor(sf::Color::White);
+	leftB4.rect.setFillColor(sf::Color(190, 190, 190));
 	leftB4.rect.setPosition(sf::Vector2f{ -32,-4312 });
 	wallArray.push_back(leftB4);
 
 
 	Wall rightB4;
 	rightB4.rect.setSize(sf::Vector2f{ 32,416 });
-	rightB4.rect.setFillColor(sf::Color::White);
+	rightB4.rect.setFillColor(sf::Color(190, 190, 190));
 	rightB4.rect.setPosition(sf::Vector2f{ 544,-4312 });
 	wallArray.push_back(rightB4);
+
+
+
+	sf::RectangleShape background5;
+	sf::Texture backgroundTexture5;
+
+	backgroundTexture5.loadFromFile("Map049.png");
+
+	background5.setSize(
+		sf::Vector2f(736.0f, 1024.0f)
+	);
+	background5.setTexture(&backgroundTexture5);
+	background5.setPosition(2000.0f, 0.f);
+
+	Wall wallG5obj;
+	wallG5obj.rect.setSize(sf::Vector2f{ 736,288 });
+	wallG5obj.rect.setFillColor(sf::Color::Transparent);
+	wallG5obj.rect.setPosition(sf::Vector2f{ 2000,0 });
+	wallArray.push_back(wallG5obj);
+
+
+	Wall downB5P1;
+	downB5P1.rect.setSize(sf::Vector2f{ 288,96 });
+	downB5P1.rect.setFillColor(sf::Color::Transparent);
+	downB5P1.rect.setPosition(sf::Vector2f{ 2032,864 });
+	wallArray.push_back(downB5P1);
+
+	Wall downB5P2;
+	downB5P2.rect.setSize(sf::Vector2f{ 288,96 });
+	downB5P2.rect.setFillColor(sf::Color::Transparent);
+	downB5P2.rect.setPosition(sf::Vector2f{ 2416,864 });
+	wallArray.push_back(downB5P2);
+
+
+
+	Wall leftB5;
+	leftB5.rect.setSize(sf::Vector2f{ 32,672 });
+	leftB5.rect.setFillColor(sf::Color::Transparent);
+	leftB5.rect.setPosition(sf::Vector2f{ 2000,288 });
+	wallArray.push_back(leftB5);
+
+
+	Wall rightB5;
+	rightB5.rect.setSize(sf::Vector2f{ 32,672 });
+	rightB5.rect.setFillColor(sf::Color::Red);
+	rightB5.rect.setPosition(sf::Vector2f{ 2704,288 });
+	wallArray.push_back(rightB5);
+
+
+
+
+
+
 
 
 	//
@@ -643,7 +779,7 @@ hpbar.setPosition(60, 33);
 		sf::Vector2f(32.0f, 32.0f)
 	);
 	redplus1B2obj.setTexture(&redplus1B2objTexture);
-	redplus1B2obj.setPosition(224.f, -1352.f);
+	redplus1B2obj.setPosition(sf::Vector2f( randomredplus1B2X(),randomredplus1B2Y() ));
 	//////////////////////////////////////////////////////////////////////////////////
 
 	/*BED*/
@@ -938,20 +1074,20 @@ hpbar.setPosition(60, 33);
 		sf::Vector2f(32.0f, 288.0f)
 	);
 	tableSP3F1obj.rect.setTexture(&tableSP3F1objTexture);
-	tableSP3F1obj.rect.setPosition(32.f, -4248.f);
+	tableSP3F1obj.rect.setPosition(37.f, -4248.f);
 	wallArray.push_back(tableSP3F1obj);
 	//////////////////////////////////////////////////////////////////////////////////
-	Wall tableSP4F1obj;
-	sf::Texture  tableSP4F1objTexture;
+	//Wall tableSP4F1obj;
+	//sf::Texture  tableSP4F1objTexture;
 
-	tableSP4F1objTexture.loadFromFile("tableSP5.png");
+	//tableSP4F1objTexture.loadFromFile("tableSP5.png");
 
-	tableSP4F1obj.rect.setSize(
-		sf::Vector2f(32.0f, 256.0f)
-	);
-	tableSP4F1obj.rect.setTexture(&tableSP4F1objTexture);
-	tableSP4F1obj.rect.setPosition(480.f, -4312.f);
-	wallArray.push_back(tableSP4F1obj);
+	//tableSP4F1obj.rect.setSize(
+		//sf::Vector2f(32.0f, 256.0f)
+	//);
+	//tableSP4F1obj.rect.setTexture(&tableSP4F1objTexture);
+	//tableSP4F1obj.rect.setPosition(480.f, -4312.f);
+	//wallArray.push_back(tableSP4F1obj);
 	//////////////////////////////////////////////////////////////////////////////////
 	Wall tableSP5F1obj;
 	sf::Texture  tableSP5F1objTexture;
@@ -979,8 +1115,10 @@ hpbar.setPosition(60, 33);
 	playerSound.setBuffer(playerBuffer);
 	playerSound.play();
 
-	sf::SoundBuffer playerAttackSound;
 
+
+
+	sf::SoundBuffer playerAttackSound;
 	sf::Sound playerAttackSoundobj;
 	playerAttackSound.loadFromFile("Explosion6.wav");
 	playerAttackSoundobj.setBuffer(playerAttackSound);
@@ -1019,8 +1157,10 @@ hpbar.setPosition(60, 33);
 
 
 	sf::Texture enemyTexture;
+	sf::Texture enemyTexture2;
 	Enemy enemy;
 	enemyTexture.loadFromFile("Zombie_Level1.png");
+	enemyTexture2.loadFromFile("Zombie level3.png");
 	enemy.sprite.setTexture(enemyTexture); 
 	 
 	float deltatime = 0.0f;
@@ -1035,6 +1175,15 @@ hpbar.setPosition(60, 33);
 	vector<Enemy> enemyArray;
 	enemyArray.push_back(enemy);
 
+	enemy.rect.setPosition({150, 200});
+	enemy.enemyAttack = 0.2;
+	enemyArray.push_back(enemy);
+	
+	enemy.sprite.setTexture(enemyTexture2);
+	enemy.hp = 500000;
+	enemy.enemyAttack = 10;
+	enemy.rect.setPosition({350, 350});
+	enemyArray.push_back(enemy);
 	///////////////
 
 	///////save/menu////////
@@ -1044,7 +1193,12 @@ hpbar.setPosition(60, 33);
 	displayscore.setFillColor(sf::Color::Black);
 
 	ofstream filewriter;
-	filewriter.open("save.txt");
+	
+
+	std::map<int, std::string> scores;
+	std::ifstream filereader;
+
+	std::string word;
 	///////////////////////
 
 	sf::Text Keepscore;
@@ -1067,12 +1221,6 @@ hpbar.setPosition(60, 33);
 		{
 			switch (evnt.type)
 			{
-			case sf::Event::KeyReleased:
-				if (evnt.key.code == sf::Keyboard::E) {
-
-				playerAttackSoundobj.play();
-				}
-				break;
 			case sf::Event::KeyPressed:
 				if (mode == 1) {
 					if (evnt.key.code == 22) {
@@ -1090,18 +1238,23 @@ hpbar.setPosition(60, 33);
 							mode = 0;
 						}
 						if (select == 1) {
-							std::cout << "score " << std::endl;
+							mode = 3;
 						}
 						if (select == 2) {
 							window.close();
 						}
 					}
 				}
-				if (mode == 0) {
+				else if (mode == 0) {
 					if (evnt.key.code == 4) {
 						bullet.rect.setPosition(player.rect.getPosition().x + 7, player.rect.getPosition().y + 13);
 						bullet.direction = player.direction;
 						bullet.currentframe = 0;
+					}
+				}
+				else if (mode == 3) {
+					if (evnt.key.code == 58) {
+						mode = 1;
 					}
 				}
 				break;
@@ -1109,6 +1262,7 @@ hpbar.setPosition(60, 33);
 			case sf::Event::TextEntered:
 				if (mode == 2) {
 					if (evnt.key.code == 13) {
+						filewriter.open("save.txt");
 						cout << str << endl;
 						filewriter << str << "," << to_string(score) << "\n";
 						str = "";
@@ -1132,17 +1286,21 @@ hpbar.setPosition(60, 33);
 			}
 		}
 
+
+		Keepscore.setPosition(player.rect.getPosition().x - window.getSize().x/2, player.rect.getPosition().y - window.getSize().y/2);
 		if (player.myHP <= 0 && !isdeadmusicplay) {
 			music.stop();
 			music.openFromFile("deadsound.ogg");
 			music.play();
 			isdeadmusicplay = true;
-			score = Clockscore.getElapsedTime().asSeconds();
+			
 			Keepscore.setString("You died!!");
 		}
 		else if (player.myHP > 0 && !isdeadmusicplay) {
 			/////score///////
-			Keepscore.setString("Score: " + to_string(Clockscore.getElapsedTime().asSeconds()));
+			score += Clockscore.getElapsedTime().asSeconds();
+			Clockscore.restart();
+			Keepscore.setString("Score: " + to_string(static_cast<int> (score * 100)));
 			/////////////
 		}
 
@@ -1191,9 +1349,7 @@ hpbar.setPosition(60, 33);
 
 		for (auto& e : enemyArray) {
 			if (player.rect.getGlobalBounds().intersects(e.rect.getGlobalBounds())) {
-				//std::cout << "Hit" << std::endl;
-				player.myHP -= 1;
-				//std::cout << player.myHP << std::endl
+				player.myHP -= e.enemyAttack;
 				if (player.myHP <= 0)
 				{
 					player.myHP = 0;
@@ -1202,25 +1358,36 @@ hpbar.setPosition(60, 33);
 		}
 
 		if (player.rect.getGlobalBounds().intersects(warpPoint1.getGlobalBounds())) {
-			player.rect.setPosition({ 491, -1072 });
+			player.rect.setPosition({ 491, -1073 });
 		}
+
+		if (player.rect.getGlobalBounds().intersects(warpPoint2.getGlobalBounds())) {
+			player.rect.setPosition({ 491, -2523 });
+		}
+
+		if (player.rect.getGlobalBounds().intersects(warpPoint3.getGlobalBounds())) {
+			player.rect.setPosition({ 491, -3973 });
+		}
+
+
 		if (player.rectfoot.getGlobalBounds().intersects(box1B2obj.getGlobalBounds())) {
 			player.sprite.setTexture(playerTexture1);
 			box1B2obj.setTexture(&box1B2objTexture1);
 			player.activeItem2 = player.iconobj4;
+
 			
 		}
 		if (player.rectfoot.getGlobalBounds().intersects(redplus1B2obj.getGlobalBounds())) {
-			
 			if (keepItem == 0 && stateChange == 0 ) {
 				redplus1B2obj.setTexture(&redplus1B2objTexture1);
-				player.myHP += 30;
-				
+				player.myHP += 10;
+				if (player.myHP >= 45)
+				{
+					player.myHP = 45;
+				}
 				keepItem = 1;
 				stateChange = 1;
-
 			}
-			
 		}
 
 		if (player.rectfoot.getGlobalBounds().intersects(greenplus1B3obj.getGlobalBounds())) {
@@ -1243,6 +1410,8 @@ hpbar.setPosition(60, 33);
 			player.downAttack = 11;
 			player.leftAttack = 10;
 			player.rightAttack = 12;		
+			playerAttack = 3;
+			std::cout << playerAttack << std::endl;
 		}
 		
 		if (bullet.currentframe == bullet.lifetime) {
@@ -1256,7 +1425,8 @@ hpbar.setPosition(60, 33);
 				if (bullet.rect.getGlobalBounds().intersects(e->rect.getGlobalBounds())) {
 					std::cout << "oraoraoraoaroa" << std::endl;
 					bullet.currentframe = bullet.lifetime;
-					e->hp--;
+					e->hp-=playerAttack;
+					cout << e->hp << endl;
 					//bullet.direction == 0;
 					
 				}
@@ -1264,7 +1434,64 @@ hpbar.setPosition(60, 33);
 		}
 
 		for (vector<Enemy>::iterator e = enemyArray.begin(); e != enemyArray.end(); e++) {
-			if (e->hp == 0) {
+			//if (distance player and enemy < 3) { e->aggressive = true; }
+			counter = 0;
+			for (iter15 = wallArray.begin(); iter15 != wallArray.end(); iter15++)
+			{
+				//std::cout << "drawyo" << std::endl;
+				if (e->rect.getGlobalBounds().intersects(iter15->rect.getGlobalBounds())) {
+					if (e->direction == 1)//up
+					{
+						e->canMoveUp = false;
+						e->rect.move(0, 1);
+					}
+			
+					else		 if (e->direction == 2)//down
+					{
+						e->canMoveDown = false;
+						e->rect.move(0, -1);
+					}
+
+
+
+
+
+
+					else	 if (e->direction == 3)//left
+					{
+						e->canMoveLeft = false;
+						e->rect.move(1, 0);
+					}
+
+					else		 if (e->direction == 4)//right
+					{
+						e->canMoveRight = false;
+						e->rect.move(-1, 0);
+					}
+					else
+					{
+
+					}
+				}
+				counter++;
+			}
+			if (e->aggressive) {
+				if (player.rect.getPosition().x > e->rect.getPosition().x) {
+					e->direction = 4;
+				}
+				else	 if (player.rect.getPosition().x < e->rect.getPosition().x) {
+					e->direction = 3;
+				}
+				 else	 if (player.rect.getPosition().y > e->rect.getPosition().y) {
+					e->direction = 2;
+				}
+				 else	 if (player.rect.getPosition().y < e->rect.getPosition().y) {
+					e->direction = 1;
+				}
+			}
+			e->updateCollision();
+			if (e->hp <= 0) {
+				score += 1000;
 				enemyArray.erase(e);
 				break;
 			}
@@ -1276,12 +1503,12 @@ hpbar.setPosition(60, 33);
 		gameName.setFillColor(sf::Color::Black);
 		gameName.setFont(font);
 		gameName.setString("Zubaibaru");
-
+		
 		//////////////////////////////////////////////////
 		
 		
 		
-		window.clear(sf::Color(150,150,150)); 
+		window.clear(sf::Color(0,0,0)); 
 
 		
 		if (mode == 0) {
@@ -1290,6 +1517,8 @@ hpbar.setPosition(60, 33);
 			window.draw(background2);
 			window.draw(background3);
 			window.draw(background4);
+			window.draw(background5);
+
 			window.draw(downB1.rect);
 			window.draw(leftB1.rect);
 			window.draw(rightB1.rect);
@@ -1306,10 +1535,16 @@ hpbar.setPosition(60, 33);
 			window.draw(leftB4.rect);
 			window.draw(rightB4.rect);
 
+			window.draw(downB5P1.rect);
+			window.draw(downB5P2.rect);
+			window.draw(leftB5.rect);
+			window.draw(rightB5.rect);
+
 			window.draw(wallB1obj.rect);
 			window.draw(wallB2obj.rect);
 			window.draw(wallB3obj.rect);
 			window.draw(wallB4obj.rect);
+			window.draw(wallG5obj.rect);
 
 			window.draw(doublesofa1B1obj.rect);
 			window.draw(doublesofa2B1obj.rect);
@@ -1362,11 +1597,13 @@ hpbar.setPosition(60, 33);
 			//window.draw(tableSP2P3F1obj.rect);
 			window.draw(tableSP2P4F1obj.rect);
 			window.draw(tableSP3F1obj.rect);
-			window.draw(tableSP4F1obj.rect);
+			//window.draw(tableSP4F1obj.rect);
 			window.draw(tableSP5F1obj.rect);
 
 
 			window.draw(warpPoint1);
+			window.draw(warpPoint2);
+			window.draw(warpPoint3);
 
 
 			
@@ -1389,9 +1626,10 @@ hpbar.setPosition(60, 33);
 
 
 
-			window.draw(player.sprite); window.draw(enemy.sprite);
+			window.draw(player.sprite);// window.draw(enemy.sprite);
 			window.draw(player.rect);
 			for (auto& e : enemyArray) {
+				window.draw(e.sprite);
 				window.draw(e.rect);
 			}
 			window.draw(player.rectfoot);
@@ -1428,7 +1666,7 @@ hpbar.setPosition(60, 33);
 			view.setCenter(window.getSize().x / 2, window.getSize().y / 2);
 			window.setView(view);
 			window.draw(gameName);
-
+			window.draw(menuPicobj);
 			for (int button = 0; button < 3; button++) {
 				sf::Text text(menuitem[button], font);
 				text.setCharacterSize(20);
@@ -1444,6 +1682,43 @@ hpbar.setPosition(60, 33);
 
 			window.draw(displayscore);
 		}
+		else if (mode == 3) {
+		window.setView(sf::View());
+			sf::Text text("Enter to go back", font);
+			text.setCharacterSize(30);
+			text.setFillColor(sf::Color::Black);
+
+			filereader.open("save.txt");
+			do {
+				filereader >> word;
+				auto first_token = word.substr(0, word.find(','));
+				auto second_token = std::stoi(word.substr(word.find(',') + 1, word.length()));
+				scores[second_token] = first_token;
+			} while (filereader.good());
+			filereader.close();
+			
+			std::map<int, std::string>::iterator end = scores.end();
+			std::map<int, std::string>::iterator beg = scores.begin();
+			end--;
+			beg--;
+			int currentDisplay = 0;
+			for (std::map<int, std::string>::iterator it = end; it != beg; it--) {
+				text.setString(it->second);
+				text.setPosition(350, 400 + 40 * currentDisplay);
+				window.draw(text);
+				text.setString(std::to_string(it->first));
+				text.setPosition(700, 400 + 40 * currentDisplay);
+				window.draw(text);
+				currentDisplay++;
+				if (currentDisplay == 5) {
+					break;
+				}
+			}
+			currentDisplay = 0;
+			text.setString("Enter to go back");
+			text.setPosition(350, 650);
+			window.draw(text);
+			}
 		window.display(); 
 	}
 	

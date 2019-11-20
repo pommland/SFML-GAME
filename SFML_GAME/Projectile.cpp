@@ -1,7 +1,7 @@
 #include "Projectile.h"
 
 Projectile::Projectile() {
-	rect.setFillColor(sf::Color::Magenta);
+	rect.setFillColor(sf::Color::Transparent);
 	rect.setSize({50, 50});
 }
 

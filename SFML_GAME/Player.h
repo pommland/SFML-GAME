@@ -29,6 +29,7 @@ public:
 	float animationFrameWalk = 0;
 	float animationFrameAttack = 0;
 	float animationFrameStopWalk = 0;
+	float count = 0;
 	sf::SoundBuffer playerBuffer;
 	sf::Sound playerSound;
 
@@ -82,5 +83,6 @@ public:
 
 
 	int deadAnimation = 0;
+	int speed = 1;
 };
 

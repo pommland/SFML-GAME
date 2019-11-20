@@ -204,22 +204,22 @@ void Player::updateMovement(int *mode) {
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift)) {
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-			rect.move(sf::Vector2f(0, -5));
+			rect.move(sf::Vector2f(0, -2));
 			sprite.setTextureRect(sf::IntRect(128 * (int)animationFrameWalk, 128 * 0, 128, 128));
 
 		}
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-			rect.move(sf::Vector2f(0, 5));
+			rect.move(sf::Vector2f(0, 2));
 			sprite.setTextureRect(sf::IntRect(128 * (int)animationFrameWalk, 128 * 2, 128, 128));
 		}
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-			rect.move(sf::Vector2f(5, 0));
+			rect.move(sf::Vector2f(2, 0));
 			sprite.setTextureRect(sf::IntRect(128 * (int)animationFrameWalk, 128 * 3, 128, 128));
 		}
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
 			if (canMoveLeft == true)
 			{
-				rect.move(sf::Vector2f(-5, 0));
+				rect.move(sf::Vector2f(-2, 0));
 				sprite.setTextureRect(sf::IntRect(128 * (int)animationFrameWalk, 128 * 1, 128, 128));
 			}
 			direction = 3;
@@ -233,19 +233,19 @@ void Player::updateMovement(int *mode) {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl)) {
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift)) {
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-				rect.move(sf::Vector2f(0, -20));
+				rect.move(sf::Vector2f(0, -5));
 				sprite.setTextureRect(sf::IntRect(128 * (int)animationFrameWalk, 128 * 0, 128, 64));
 			}
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-				rect.move(sf::Vector2f(0, 20));
+				rect.move(sf::Vector2f(0, 5));
 				sprite.setTextureRect(sf::IntRect(128 * (int)animationFrameWalk, 128 * 2, 128, 128));
 			}
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-				rect.move(sf::Vector2f(20, 0));
+				rect.move(sf::Vector2f(5, 0));
 				sprite.setTextureRect(sf::IntRect(128 * (int)animationFrameWalk, 128 * 3, 128, 128));
 			}
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-				rect.move(sf::Vector2f(-20, 0));
+				rect.move(sf::Vector2f(-5, 0));
 				sprite.setTextureRect(sf::IntRect(64 * (int)animationFrameWalk, 128 * 1, 128, 128));
 			}
 		}
@@ -258,7 +258,7 @@ void Player::updateMovement(int *mode) {
 
 		if (canMoveUp ==true)
 		{
-			rect.move(sf::Vector2f(0, -3));
+			rect.move(sf::Vector2f(0, -speed));
 			sprite.setTextureRect(sf::IntRect(128 * (int)animationFrameWalk, 128 * 0, 128, 128));
 
 		}
@@ -281,7 +281,7 @@ void Player::updateMovement(int *mode) {
 
 		if (canMoveDown == true)
 		{
-			rect.move(sf::Vector2f(0, 3));
+			rect.move(sf::Vector2f(0, speed));
 			sprite.setTextureRect(sf::IntRect(128 * (int)animationFrameWalk, 128 * 2, 128, 128));
 		}
 
@@ -305,7 +305,7 @@ void Player::updateMovement(int *mode) {
 
 		if (canMoveLeft == true)
 		{
-			rect.move(sf::Vector2f(-3, 0));
+			rect.move(sf::Vector2f(-speed, 0));
 			sprite.setTextureRect(sf::IntRect(128 * (int)animationFrameWalk, 128 * 1, 128, 128));
 		}
 
@@ -328,7 +328,7 @@ void Player::updateMovement(int *mode) {
 
 		if (canMoveRight == true)
 		{
-			rect.move(sf::Vector2f(3, 0));
+			rect.move(sf::Vector2f(speed, 0));
 			sprite.setTextureRect(sf::IntRect(128 * (int)animationFrameWalk, 128 * 3, 128, 128));
 		
 		}
@@ -348,19 +348,19 @@ void Player::updateMovement(int *mode) {
 	}
 	//else
 	//{
-	//	//player not moving
+	//	//not moving
 	//}
 
 
 
-
+/*
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Y)) {
 		std::cout << rect.getPosition().x << " " << rect.getPosition().y << std::endl;
 
 	}
 
 	
-
+*/
 
 	
 
@@ -368,9 +368,12 @@ void Player::updateMovement(int *mode) {
 
 
 
-	if ( sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
+	 else if ( sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
 		checkPressed = true;
-
+		if (15 / count == 1) {
+			playerAttackSoundobj.play();
+		}
+		
 		if (lastpresses == 'W')
 		{
 			sprite.setTextureRect(sf::IntRect(absAttack* (int)animationFrameAttack, absAttack* topAttack, absAttack, absAttack));
@@ -414,9 +417,15 @@ void Player::updateMovement(int *mode) {
 	if (animationFrameAttack >= 5) {
 		animationFrameAttack = 0;
 	}
+	count += 0.5;
+	if (count >= 15.2) {
+		count = 0;
+	}
+	
 	else if (checkPressed = false)
 	{
 		rectfrontAttack.setSize(sf::Vector2f(0, 0));
 	}
+
 }
 
