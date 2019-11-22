@@ -14,12 +14,39 @@ Enemy::Enemy()
 
 }
 void Enemy::updateCollision() {
+
+
+
+	if (lastDirection == 1)
+	{
+		sprite.setTextureRect(sf::IntRect(64 * (int)animationFrameStopWalk, 64 * 0, 64, 64));
+
+	}
+	if (lastDirection == 2)
+	{
+		sprite.setTextureRect(sf::IntRect(64 * (int)animationFrameStopWalk, 64 * 6, 64, 64));
+
+	}
+	if (lastDirection == 3)
+	{
+		sprite.setTextureRect(sf::IntRect(64 * (int)animationFrameStopWalk, 64 * 5, 64, 64));
+
+	}
+	if (lastDirection == 4)
+	{
+		sprite.setTextureRect(sf::IntRect(64 * (int)animationFrameStopWalk, 64 * 14, 64, 64));
+
+	}
+
+
 	if (direction == 1) {
 		if (canMoveUp == true)
 		{
 			rect.move({ 0, -1 });
 			sprite.setTextureRect(sf::IntRect(64 * (int)animationFrameWalk, 64 * 8, 64, 64));
 			//direction = 1;
+
+			lastDirection = 1;
 
 			canMoveUp = true;
 			canMoveDown = true;
@@ -37,7 +64,7 @@ void Enemy::updateCollision() {
 			rect.move({ 0, 1 });
 			sprite.setTextureRect(sf::IntRect(64 * (int)animationFrameWalk, 64 * 10, 64, 64));
 			//direction = 2;
-
+			lastDirection = 2;
 			canMoveUp = true;
 			canMoveDown = true;
 			canMoveLeft = true;
@@ -52,7 +79,7 @@ void Enemy::updateCollision() {
 			rect.move({ -1, 0 });
 			sprite.setTextureRect(sf::IntRect(64 * (int)animationFrameWalk, 64 * 9, 64, 64));
 		//	direction = 3;
-
+			lastDirection = 3;
 			canMoveUp = true;
 			canMoveDown = true;
 			canMoveLeft = true;
@@ -68,7 +95,7 @@ void Enemy::updateCollision() {
 
 			sprite.setTextureRect(sf::IntRect(64 * (int)animationFrameWalk, 64 * 11, 64, 64));
 		//	direction = 4;
-
+			lastDirection = 4;
 			canMoveUp = true;
 			canMoveDown = true;
 			canMoveLeft = true;
@@ -80,6 +107,12 @@ void Enemy::updateCollision() {
 	animationFrameWalk += 0.2;
 	if (animationFrameWalk >= 8) {
 		animationFrameWalk = 0;
+	}
+
+
+	animationFrameStopWalk += 0.05;
+	if (animationFrameStopWalk >= 3) {
+		animationFrameStopWalk = 0;
 	}
 
 	sprite.setPosition(rect.getPosition());

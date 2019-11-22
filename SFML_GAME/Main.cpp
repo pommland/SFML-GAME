@@ -8,7 +8,7 @@
 #include <fstream>
 
 int counter;
-int playerAttack = 1; 
+float playerAttack = 1; 
 
 static const float VIEW_HEIGHT = 600.0F;
 
@@ -73,7 +73,7 @@ int randomredplus1B2Y()
 
 int randomgreenplus1B3X()
 {
-	int randomgreenplus1B3objX[14] = { 288,320,352,384,416,448,480,512 };
+	int randomgreenplus1B3objX[14] = { 128,160,192,244,256,288,320,352,384,416,448,480,512,544 };
 
 	PXgreenplus1B3 = rand() % 14;
 	return randomgreenplus1B3objX[PXgreenplus1B3];
@@ -81,7 +81,7 @@ int randomgreenplus1B3X()
 
 int randomgreenplus1B3Y()
 {
-	int randomredplus1B2objY[2] = { -1416,-1384 };
+	int randomredplus1B2objY[2] = { -2702,-2736 };
 
 	PYredplus1B2 = rand() % 2;
 	return randomredplus1B2objY[PYredplus1B2];
@@ -100,6 +100,10 @@ int main()
 	
 	printf("value from function %d\n", randomredplus1B2X());
 	printf("value from function %d", randomredplus1B2Y());
+
+
+	printf("value from function %d\n", randomgreenplus1B3X());
+	printf("value from function %d", randomgreenplus1B3Y());
 
 	//printf("value from function %d", x);
 //	printf("value from function %d", y);
@@ -975,7 +979,7 @@ hpbar.setPosition(60, 33);
 		sf::Vector2f(32.0f, 32.0f)
 	);
 	greenplus1B3obj.setTexture(&greenplus1B3objTexture);
-	greenplus1B3obj.setPosition(224.f, -2736.f);
+	greenplus1B3obj.setPosition(randomgreenplus1B3X(), randomgreenplus1B3Y());
 	/*--------------------------------------------------------------------------------------------------------*/
 
 	/*--------------------------------------------OBJ   B4----------------------------------------------------*/
@@ -1102,6 +1106,24 @@ hpbar.setPosition(60, 33);
 	wallArray.push_back(tableSP5F1obj);
 	/*--------------------------------------------------------------------------------------------------------*/
 
+	
+
+	/*--------------------------------------------OBJ   G5----------------------------------------------------*/
+	/*box1G5*/
+	sf::RectangleShape box1G5obj;
+	sf::Texture box1G5objTexture;
+	sf::Texture box1G5objTexture1;
+
+	box1G5objTexture.loadFromFile("box1.png");
+	box1G5objTexture1.loadFromFile("beZom.png");
+
+	box1G5obj.setSize(
+		sf::Vector2f(32.0f, 32.0f)
+	);
+	box1G5obj.setTexture(&box1G5objTexture);
+	box1G5obj.setPosition(2350.f, 560.f);
+	/*--------------------------------------------------------------------------------------------------------*/
+
 
 
 	
@@ -1147,20 +1169,25 @@ hpbar.setPosition(60, 33);
 	sf::Texture playerTexture;
 	sf::Texture playerTexture1;
 	//sf::Texture playerTexture2;
-	//sf::Texture playerTexture2;
+	sf::Texture playerTexture2;
 	Player player;
 	playerTexture.loadFromFile("PomLongSwordtry2.png");
 	//playerTexture1.loadFromFile("PomHaveClothestry2.png");
 	playerTexture1.loadFromFile("PomHaveClothestry2.png");
-	//playerTexture2.loadFromFile("PomZombieMode.png");
+	playerTexture2.loadFromFile("PomZombieMode.png");
 	player.sprite.setTexture(playerTexture); 
 
 
 	sf::Texture enemyTexture;
 	sf::Texture enemyTexture2;
+	sf::Texture enemyTexture3;
+	sf::Texture enemyTexture4;
+
 	Enemy enemy;
 	enemyTexture.loadFromFile("Zombie_Level1.png");
 	enemyTexture2.loadFromFile("Zombie level3.png");
+	enemyTexture3.loadFromFile("Zombie level2.png");
+	enemyTexture4.loadFromFile("miniboss.png");
 	enemy.sprite.setTexture(enemyTexture); 
 	 
 	float deltatime = 0.0f;
@@ -1173,17 +1200,111 @@ hpbar.setPosition(60, 33);
 	///////////////
 	int enemy_move = 0;
 	vector<Enemy> enemyArray;
-	enemyArray.push_back(enemy);
-
+	
 	enemy.rect.setPosition({150, 200});
-	enemy.enemyAttack = 0.2;
+	enemy.enemyAttack = 0.1;
 	enemyArray.push_back(enemy);
 	
-	enemy.sprite.setTexture(enemyTexture2);
-	enemy.hp = 500000;
-	enemy.enemyAttack = 10;
-	enemy.rect.setPosition({350, 350});
+	enemy.rect.setPosition({ 200, 200 });
 	enemyArray.push_back(enemy);
+
+	enemy.rect.setPosition({ 270, 350 });
+	enemyArray.push_back(enemy);
+
+	enemy.rect.setPosition({ 340, 350 });
+	enemyArray.push_back(enemy);
+
+
+	enemy.rect.setPosition({ 400, 375 });
+	enemyArray.push_back(enemy);
+
+
+
+	enemy.sprite.setTexture(enemyTexture2);
+	enemy.hp = 35;
+	enemy.enemyAttack = 0.1;
+
+
+	enemy.rect.setPosition({ 32, -1300 });
+	enemyArray.push_back(enemy);
+
+	enemy.rect.setPosition({ 96, -1210 });
+	enemyArray.push_back(enemy);
+
+
+	enemy.rect.setPosition({ 256, -1300 });
+	enemyArray.push_back(enemy);
+
+
+	enemy.rect.setPosition({ 288, -1204 });
+	enemyArray.push_back(enemy);
+
+	enemy.rect.setPosition({ 288, -1224 });
+	enemyArray.push_back(enemy);
+
+
+	enemy.rect.setPosition({ 320, -1354 });
+	enemyArray.push_back(enemy);
+
+
+
+	enemy.sprite.setTexture(enemyTexture3);
+	enemy.hp = 35;
+	enemy.enemyAttack = 0.1;
+
+	enemy.rect.setPosition({ 70, -2750 });
+	enemyArray.push_back(enemy);
+
+
+	enemy.rect.setPosition({ 198, -2690 });
+	enemyArray.push_back(enemy);
+
+
+	enemy.rect.setPosition({ 255, -2760 });
+	enemyArray.push_back(enemy);
+
+
+	enemy.rect.setPosition({ 285, -2690 });
+	enemyArray.push_back(enemy);
+
+
+	enemy.sprite.setTexture(enemyTexture4);
+	enemy.hp = 70;
+	enemy.enemyAttack = 0.3;
+
+	enemy.rect.setPosition({ 98, -4300 });
+	enemyArray.push_back(enemy);
+
+
+	enemy.rect.setPosition({ 160, -4200 });
+	enemyArray.push_back(enemy);
+
+
+
+	enemy.rect.setPosition({ 470, -4150 });
+	enemyArray.push_back(enemy);
+
+
+
+
+
+
+
+
+
+//	enemy.rect.setPosition({ 320, -1200 });
+//	enemyArray.push_back(enemy);
+
+
+
+//	enemy.rect.setPosition({ 288, -1170 });
+//	enemyArray.push_back(enemy);
+
+
+	//enemy.rect.setPosition({ 288, -1096 });
+	//enemyArray.push_back(enemy);
+
+
 	///////////////
 
 	///////save/menu////////
@@ -1377,6 +1498,21 @@ hpbar.setPosition(60, 33);
 
 			
 		}
+
+
+		if (player.rectfoot.getGlobalBounds().intersects(box1G5obj.getGlobalBounds())) {
+			player.sprite.setTexture(playerTexture2);
+			box1G5obj.setTexture(&box1G5objTexture1);
+			//player.activeItem2 = player.iconobj4;
+			player.activeItem = player.iconobj5;
+			player.activeItem2 = player.iconobj6;
+
+
+		}
+
+
+
+
 		if (player.rectfoot.getGlobalBounds().intersects(redplus1B2obj.getGlobalBounds())) {
 			if (keepItem == 0 && stateChange == 0 ) {
 				redplus1B2obj.setTexture(&redplus1B2objTexture1);
@@ -1475,6 +1611,7 @@ hpbar.setPosition(60, 33);
 				}
 				counter++;
 			}
+		//	if(e->rect.getPosition().x - player.rect.getPosition().x )
 			if (e->aggressive) {
 				if (player.rect.getPosition().x > e->rect.getPosition().x) {
 					e->direction = 4;
@@ -1600,6 +1737,7 @@ hpbar.setPosition(60, 33);
 			//window.draw(tableSP4F1obj.rect);
 			window.draw(tableSP5F1obj.rect);
 
+			window.draw(box1G5obj);
 
 			window.draw(warpPoint1);
 			window.draw(warpPoint2);

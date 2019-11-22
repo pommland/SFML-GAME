@@ -7,14 +7,14 @@ class Enemy
 public:
 	Enemy();
 	void updateCollision();
-	int hp = 10;
+	float hp = 10;
 	int direction = 0;
-	bool aggressive = false;
+	bool aggressive = true;
 
 	sf::Sprite sprite;
 	sf::RectangleShape rect;
 
-	int enemyAttack = 1;
+	 float enemyAttack ;
 
 	sf::RectangleShape rectfoot;
 	sf::RectangleShape rectcentral;
@@ -31,6 +31,8 @@ public:
 	bool canMoveDown = true;
 	bool canMoveLeft = true;
 	bool canMoveRight = true;
+
+	int lastDirection ;
 
 
 };

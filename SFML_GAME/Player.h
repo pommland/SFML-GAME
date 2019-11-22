@@ -43,17 +43,25 @@ public:
 	sf::Texture  HPbarobjTexture;
 
 	sf::RectangleShape iconobj1;
-	sf::Texture iconPunchobjTexture1;
-	sf::Texture iconLongswordobjTexture1;
-	sf::Texture shirtobjTexture2;
-	sf::Texture yellowshirtTexture2;
 	sf::RectangleShape iconobj2;
 	sf::RectangleShape iconobj3;
 	sf::RectangleShape iconobj4;
+	sf::RectangleShape iconobj5;
+	sf::RectangleShape iconobj6;
+
+	sf::Texture iconPunchobjTexture1;
+	sf::Texture iconLongswordobjTexture1;
+
+	sf::Texture Redsword1;
+	sf::Texture greenshirt2;
+
+	sf::Texture shirtobjTexture2;
+	sf::Texture yellowshirtTexture2;
+	
 	sf::Texture iconobjTexture2;
 
 
-	 int myHP = 45;
+	 float myHP = 45;
 	sf::RectangleShape hp;
 
 	int absAttack = 128;

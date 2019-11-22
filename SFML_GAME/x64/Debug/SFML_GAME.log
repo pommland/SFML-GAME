@@ -1,78 +1,53 @@
 ﻿  Main.cpp
 C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(97,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(619,67): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(619,67): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(619,67): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(619,67): warning C4244:             T=float
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(619,67): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(619,50): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(619,50): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(619,50): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(619,50): warning C4244:             T=float
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(619,50): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(782,79): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(782,79): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(782,79): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(782,79): warning C4244:             T=float
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(782,79): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(782,59): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(782,59): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(782,59): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(782,59): warning C4244:             T=float
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(782,59): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1179,22): warning C4244:  '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1420,21): warning C4553:  '==': result of expression not used; did you intend '='?
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1666,62): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1666,62): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1666,62): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1666,62): warning C4244:             T=unsigned int
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1666,62): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1666,38): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1666,38): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1666,38): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1666,38): warning C4244:             T=unsigned int
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1666,38): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1675,28): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1680,62): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1680,62): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1680,62): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1680,62): warning C4244:             T=unsigned int
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1680,62): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1680,38): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1680,38): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1680,38): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1680,38): warning C4244:             T=unsigned int
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1680,38): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1707,31): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
-  Player.cpp
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1710,31): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(118,26): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(118,26): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(118,26): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(118,26): warning C4244:             T=float
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(118,26): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(261,30): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(261,30): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(261,30): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(261,30): warning C4244:             T=float
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(261,30): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(284,30): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(284,30): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(284,30): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(284,30): warning C4244:             T=float
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(284,30): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(308,27): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(308,27): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(308,27): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(308,27): warning C4244:             T=float
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(308,27): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(331,27): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(331,27): warning C4244:         with
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(331,27): warning C4244:         [
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(331,27): warning C4244:             T=float
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(331,27): warning C4244:         ]
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(408,25): warning C4305:  '+=': truncation from 'double' to 'float'
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(412,29): warning C4305:  '+=': truncation from 'double' to 'float'
-  Generating Code...
-C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Player.cpp(416,27): warning C4305:  '+=': truncation from 'double' to 'float'
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(623,67): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(623,67): warning C4244:         with
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(623,67): warning C4244:         [
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(623,67): warning C4244:             T=float
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(623,67): warning C4244:         ]
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(623,50): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(623,50): warning C4244:         with
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(623,50): warning C4244:         [
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(623,50): warning C4244:             T=float
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(623,50): warning C4244:         ]
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(786,79): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(786,79): warning C4244:         with
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(786,79): warning C4244:         [
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(786,79): warning C4244:             T=float
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(786,79): warning C4244:         ]
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(786,59): warning C4244:  'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(786,59): warning C4244:         with
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(786,59): warning C4244:         [
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(786,59): warning C4244:             T=float
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(786,59): warning C4244:         ]
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(982,72): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(982,49): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1205,25): warning C4305:  '=': truncation from 'double' to 'float'
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1225,25): warning C4305:  '=': truncation from 'double' to 'float'
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1253,25): warning C4305:  '=': truncation from 'double' to 'float'
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1273,25): warning C4305:  '=': truncation from 'double' to 'float'
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1556,21): warning C4553:  '==': result of expression not used; did you intend '='?
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1804,62): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1804,62): warning C4244:         with
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1804,62): warning C4244:         [
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1804,62): warning C4244:             T=unsigned int
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1804,62): warning C4244:         ]
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1804,38): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1804,38): warning C4244:         with
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1804,38): warning C4244:         [
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1804,38): warning C4244:             T=unsigned int
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1804,38): warning C4244:         ]
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1813,28): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1818,62): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1818,62): warning C4244:         with
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1818,62): warning C4244:         [
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1818,62): warning C4244:             T=unsigned int
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1818,62): warning C4244:         ]
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1818,38): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1818,38): warning C4244:         with
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1818,38): warning C4244:         [
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1818,38): warning C4244:             T=unsigned int
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1818,38): warning C4244:         ]
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1845,31): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\SFML_GAME\Main.cpp(1848,31): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
   SFML_GAME.vcxproj -> C:\Users\pomm-\Desktop\Game_dev - Copy - Copy\x64\Debug\SFML_GAME.exe

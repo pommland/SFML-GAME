@@ -82,6 +82,19 @@ Player::Player()
 	iconobj4.setTexture(&shirtobjTexture2);
 
 
+	Redsword1.loadFromFile("Redsword.png");
+	greenshirt2.loadFromFile("greenshirt.png");
+
+
+	iconobj5.setSize(sf::Vector2f(15.0f, 15.0f));
+	iconobj5.setTexture(&Redsword1);
+
+	iconobj6.setSize(sf::Vector2f(15.0f, 15.0f));
+	iconobj6.setTexture(&greenshirt2);
+
+
+
+
 	HPbarobjTexture.loadFromFile("hp.png");
 
 	HPbarobj.setSize(sf::Vector2f(64.0f, 15.0f));
@@ -422,7 +435,7 @@ void Player::updateMovement(int *mode) {
 		count = 0;
 	}
 	
-	else if (checkPressed = false)
+	else if (checkPressed == false)
 	{
 		rectfrontAttack.setSize(sf::Vector2f(0, 0));
 	}
