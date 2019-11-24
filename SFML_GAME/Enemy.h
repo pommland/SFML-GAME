@@ -9,7 +9,7 @@ public:
 	void updateCollision();
 	float hp = 10;
 	int direction = 0;
-	bool aggressive = true;
+	bool aggressive = false;
 
 	sf::Sprite sprite;
 	sf::RectangleShape rect;

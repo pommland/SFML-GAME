@@ -18,21 +18,74 @@ void ResizeView(const sf::RenderWindow& window, sf::View& view)
 
 	view.setSize(VIEW_HEIGHT * aspectRatio, VIEW_HEIGHT);
 }
-int keepItem = 0;
+int keepredplusB2 = 0;
 int stateChange = 0;
+
+int keepgreenplusB3 = 0;
+int keepredplusF1 = 0;
+int keepbox1B2 = 0;
 //int randombox1B2X();
 //int randombox1B1objX[9];
 //int x;
 //int x = rand() % 9;
+int keepDef = 0;
 
 int PXbox1B2;
-unsigned int PYbox1B2;
+int PYbox1B2;
 
 int PXredplus1B2;
-unsigned int PYredplus1B2;
+int PYredplus1B2;
 
 int PXgreenplus1B3;
-unsigned int PYgreenplus1B3;
+int PYgreenplus1B3;
+
+
+int PXredplus1F1;
+int PYredplus1F1;
+
+
+int PXenemy1B2;
+int PYenemy1B2;
+
+int PXenemy2B2;
+int PYenemy2B2;
+
+int PXenemy3B2;
+int PYenemy3B2;
+
+int PXenemy4B2;
+int PYenemy4B2;
+
+int PXenemy5B2;
+int PYenemy5B2;
+
+
+
+int PXenemy1B3;
+int PYenemy1B3;
+
+int PXenemy2B3;
+int PYenemy2B3;
+
+int PXenemy3B3;
+int PYenemy3B3;
+
+int PXenemy4B3;
+int PYenemy4B3;
+
+int PXenemy5B3;
+int PYenemy5B3;
+
+
+int PXenemy1B4;
+int PYenemy1B4;
+
+int PXenemy2B4;
+int PYenemy2B4;
+
+int PXenemy3B4;
+int PYenemy3B4;
+
 
 
 int randombox1B2X()
@@ -70,7 +123,6 @@ int randomredplus1B2Y()
 	
 }
 
-
 int randomgreenplus1B3X()
 {
 	int randomgreenplus1B3objX[14] = { 128,160,192,244,256,288,320,352,384,416,448,480,512,544 };
@@ -81,12 +133,255 @@ int randomgreenplus1B3X()
 
 int randomgreenplus1B3Y()
 {
-	int randomredplus1B2objY[2] = { -2702,-2736 };
+	int randomgreenplus1B2objY[2] = { -2745,-2642 };
 
-	PYredplus1B2 = rand() % 2;
-	return randomredplus1B2objY[PYredplus1B2];
+	PYgreenplus1B3 = rand() % 2;
+	return randomgreenplus1B2objY[PYgreenplus1B3];
+}
+
+int randomredplus1F1X()
+{
+	int randomredplus1F1XobjX[2] = { 375,442 };
+
+	PXredplus1F1 = rand() % 2;
+	return randomredplus1F1XobjX[PXredplus1F1];
+}
+
+int randomredplus1F1Y()
+{
+	int randomredplus1F1objY[2] = { -4312,-4185 };
+
+	PYredplus1F1 = rand() % 2;
+	return randomredplus1F1objY[PYredplus1F1];
 
 }
+
+
+
+
+
+int randomenemy1B2X()
+{
+	int randomenemy1B2objX[3] = { -7,8,47 };
+
+	PXenemy1B2 = rand() % 3;
+	return randomenemy1B2objX[PXenemy1B2];
+
+}
+
+int randomenemy1B2Y()
+{
+	int randomenemy1B2objY[3] = { -1321,-1292,-1240 };
+
+	PYenemy1B2 = rand() % 3;
+	return randomenemy1B2objY[PYenemy1B2];
+
+}
+
+int randomenemy2B2X()
+{
+	int randomenemy2B2objX[7] = { 118,175,213,292,358,408,472 };
+
+	PXenemy2B2 = rand() % 7;
+	return randomenemy2B2objX[PXenemy2B2];
+
+}
+
+int randomenemy2B2Y()
+{
+	int randomenemy2B2objY[3] = { -1331,-1323,-1294 };
+
+	PYenemy2B2 = rand() % 3;
+	return randomenemy2B2objY[PYenemy2B2];
+
+}
+
+int randomenemy3B2X()
+{
+	int randomenemy3B2objX[5] = { 227,278,343,399,463 };
+
+	PXenemy3B2 = rand() % 5;
+	return randomenemy3B2objX[PXenemy3B2];
+
+}
+
+int randomenemy3B2Y()
+{
+	int randomenemy3B2objY[4] = { -1298,-1268,-1238,-1204 };
+
+	PYenemy3B2 = rand() % 4;
+	return randomenemy3B2objY[PYenemy3B2];
+
+}
+
+int randomenemy4B2X()
+{
+	int randomenemy4B2objX[4] = { 299,341,389,432 };
+
+	PXenemy4B2 = rand() % 4;
+	return randomenemy4B2objX[PXenemy4B2];
+
+}
+
+int randomenemy4B2Y()
+{
+	int randomenemy4B2objY[4] = { -1412,-1354,-1284,-1216 };
+
+	PYenemy4B2 = rand() % 4;
+	return randomenemy4B2objY[PYenemy4B2];
+
+}
+
+
+int randomenemy5B2X()
+{
+	int randomenemy5B2objX[4] = { 312,345,379,442 };
+
+	PXenemy5B2 = rand() % 4;
+	return randomenemy5B2objX[PXenemy5B2];
+
+}
+
+
+int randomenemy5B2Y()
+{
+	int randomenemy5B2objY[4] = { -1405,-1335,-1270,-1226 };
+
+	PYenemy5B2 = rand() % 4;
+	return randomenemy5B2objY[PYenemy5B2];
+
+}
+
+int randomenemy1B3X()
+{
+	int randomenemy1B3objX[2] = { -11,16 };
+
+	PXenemy1B3 = rand() % 2;
+	return randomenemy1B3objX[PXenemy1B3];
+
+}
+
+
+int randomenemy1B3Y()
+{
+	int randomenemy1B3objY[5] = { -2588,-2645,-2709,-2837,-2867 };
+
+	PYenemy1B3 = rand() % 5;
+	return randomenemy1B3objY[PYenemy1B3];
+
+}
+
+
+int randomenemy2B3X()
+{
+	int randomenemy2B3objX[5] = { -12,72,160,260,362 };
+
+	PXenemy2B3 = rand() % 5;
+	return randomenemy2B3objX[PXenemy2B3];
+
+}
+
+/*int randomenemy2B3Y()
+{
+	int randomenemy2B3objY[5] = { -2588,-2645,-2709,-2837,-2867 };
+
+	PYenemy2B3 = rand() % 5;
+	return randomenemy2B3objY[PYenemy2B3];
+
+}
+*/
+
+int randomenemy3B3X()
+{
+	int randomenemy3B3objX[4] = { 127,247,331,421 };
+
+	PXenemy3B3 = rand() % 4;
+	return randomenemy3B3objX[PXenemy3B3];
+
+}
+
+
+int randomenemy3B3Y()
+{
+	int randomenemy3B3objY[3] = { -2649,-2743,-2864 };
+
+	PYenemy3B3 = rand() % 3;
+	return randomenemy3B3objY[PYenemy3B3];
+
+}
+
+
+int randomenemy4B3X()
+{
+	int randomenemy4B3objX[4] = { 126,223,330,459 };
+
+	PXenemy4B3 = rand() % 4;
+	return randomenemy4B3objX[PXenemy4B3];
+
+}
+int randomenemy4B3Y()
+{
+	int randomenemy4B3objY[2] = { -2748,-2648 };
+
+	PYenemy4B3 = rand() % 2;
+	return randomenemy4B3objY[PYenemy4B3];
+
+}
+
+
+int randomenemy1B4X()
+{
+	int randomenemy1B4objX[4] = { 65,223,348,490 };
+
+	PXenemy1B4 = rand() % 4;
+	return randomenemy1B4objX[PXenemy1B4];
+
+}
+int randomenemy1B4Y()
+{
+	int randomenemy1B4objY[3] = { -4062,-4173,-4301 };
+
+	PYenemy1B4 = rand() % 3;
+	return randomenemy1B4objY[PYenemy1B4];
+
+}
+
+int randomenemy2B4X()
+{
+	int randomenemy2B4objX[4] = { 70,215,330,494 };
+
+	PXenemy2B4 = rand() % 4;
+	return randomenemy2B4objX[PXenemy2B4];
+
+}
+int randomenemy2B4Y()
+{
+	int randomenemy2B4objY[2] = { -4285,-4155 };
+
+	PYenemy2B4 = rand() % 2;
+	return randomenemy2B4objY[PYenemy2B4];
+
+}
+
+int randomenemy3B4X()
+{
+	int randomenemy3B4objX[4] = { 5,240,360,494 };
+
+	PXenemy3B4 = rand() % 4;
+	return randomenemy3B4objX[PXenemy3B4];
+
+}
+int randomenemy3B4Y()
+{
+	int randomenemy3B4objY[2] = { -4295,-4165 };
+
+	PYenemy3B4 = rand() % 2;
+	return randomenemy3B4objY[PYenemy3B4];
+
+}
+
+
+
 
 
 
@@ -95,15 +390,36 @@ int mode = 1;
 int main()
 {
 	srand(time(NULL));
-	printf("value from function %d\n", randombox1B2X());
-	printf("value from function %d", randombox1B2Y());
+//	printf("value from function %d\n", randombox1B2X());
+//	printf("value from function %d", randombox1B2Y());
 	
-	printf("value from function %d\n", randomredplus1B2X());
-	printf("value from function %d", randomredplus1B2Y());
+//	printf("value from function %d\n", randomredplus1B2X());
+//	printf("value from function %d", randomredplus1B2Y());
 
 
-	printf("value from function %d\n", randomgreenplus1B3X());
-	printf("value from function %d", randomgreenplus1B3Y());
+	//printf("value from function %d\n", randomgreenplus1B3X());
+	//printf("value from function %d", randomgreenplus1B3Y());
+
+	printf("value from function %d", randomenemy1B4X());
+	printf(" value from function %d\n", randomenemy1B4Y());
+
+
+	printf("value from function %d", randomenemy2B4X());
+	printf(" value from function %d\n", randomenemy2B4Y());
+
+
+	printf("value from function %d", randomenemy3B4X());
+	printf(" value from function %d\n", randomenemy3B4Y());
+
+
+	//printf("value from function %d", randomenemy4B3X());
+	//printf(" value from function %d\n", randomenemy4B3Y());
+
+
+//	printf("value from function %d", randomenemy5B2X());
+//	printf(" value from function %d\n", randomenemy5B2Y());
+
+	
 
 	//printf("value from function %d", x);
 //	printf("value from function %d", y);
@@ -474,11 +790,25 @@ HP.setPosition(sf::Vector2f(60, 33));
 HP.setFillColor(sf::Color::Red);
 HP.setSize(sf::Vector2f(MyHP / 260, 36));
 hpbar.setPosition(60, 33);
-	sf::
+	sf::*/
 
 
+	/*
+	sf::RectangleShape box1B2obj;
+	sf::Texture box1B2objTexture;
+	sf::Texture box1B2objTexture1;
+
+	box1B2objTexture.loadFromFile("box1.png");
+	box1B2objTexture1.loadFromFile("def.png");
+
+	box1B2obj.setSize(
+		sf::Vector2f(32.0f, 32.0f)
+	);
+	box1B2obj.setTexture(&box1B2objTexture);
+	box1B2obj.setPosition(sf::Vector2f(randombox1B2X(), randombox1B2Y()));
 
 
+*/
 
 	/*--------------------------------------------OBJ   B1----------------------------------------------------*/
 
@@ -982,7 +1312,7 @@ hpbar.setPosition(60, 33);
 	greenplus1B3obj.setPosition(randomgreenplus1B3X(), randomgreenplus1B3Y());
 	/*--------------------------------------------------------------------------------------------------------*/
 
-	/*--------------------------------------------OBJ   B4----------------------------------------------------*/
+	/*--------------------------------------------OBJ   F1----------------------------------------------------*/
 
 	/*sf::RectangleShape background4;
 	sf::Texture backgroundTexture4;
@@ -1007,7 +1337,7 @@ hpbar.setPosition(60, 33);
 		sf::Vector2f(32.0f, 32.0f)
 	);
 	redplus1F1obj.setTexture(&redplus1F1objTexture);
-	redplus1F1obj.setPosition(448.f, -4312.f);
+	redplus1F1obj.setPosition(randomredplus1F1X(), randomredplus1F1Y());
 
 	/*TABLESP*/
 	Wall tableSP1F1obj;
@@ -1225,26 +1555,26 @@ hpbar.setPosition(60, 33);
 	enemy.enemyAttack = 0.1;
 
 
-	enemy.rect.setPosition({ 32, -1300 });
+	enemy.rect.setPosition( randomenemy1B2X(),randomenemy1B2Y() );
 	enemyArray.push_back(enemy);
 
-	enemy.rect.setPosition({ 96, -1210 });
-	enemyArray.push_back(enemy);
-
-
-	enemy.rect.setPosition({ 256, -1300 });
+	enemy.rect.setPosition( randomenemy2B2X(), randomenemy2B2Y() );
 	enemyArray.push_back(enemy);
 
 
-	enemy.rect.setPosition({ 288, -1204 });
-	enemyArray.push_back(enemy);
-
-	enemy.rect.setPosition({ 288, -1224 });
+	enemy.rect.setPosition( randomenemy3B2X(), randomenemy3B2Y() );
 	enemyArray.push_back(enemy);
 
 
-	enemy.rect.setPosition({ 320, -1354 });
+	enemy.rect.setPosition( randomenemy4B2X(), randomenemy4B2Y() );
 	enemyArray.push_back(enemy);
+
+	enemy.rect.setPosition( randomenemy5B2X(), randomenemy5B2Y() );
+	enemyArray.push_back(enemy);
+
+
+	//enemy.rect.setPosition({ 320, -1354 });
+	//enemyArray.push_back(enemy);
 
 
 
@@ -1252,19 +1582,19 @@ hpbar.setPosition(60, 33);
 	enemy.hp = 35;
 	enemy.enemyAttack = 0.1;
 
-	enemy.rect.setPosition({ 70, -2750 });
+	enemy.rect.setPosition( randomenemy1B3X(), randomenemy1B3Y() );
 	enemyArray.push_back(enemy);
 
 
-	enemy.rect.setPosition({ 198, -2690 });
+	enemy.rect.setPosition( randomenemy2B3X(), -2871 );
 	enemyArray.push_back(enemy);
 
 
-	enemy.rect.setPosition({ 255, -2760 });
+	enemy.rect.setPosition( randomenemy3B3X(), randomenemy3B3Y() );
 	enemyArray.push_back(enemy);
 
 
-	enemy.rect.setPosition({ 285, -2690 });
+	enemy.rect.setPosition( randomenemy4B3X(), randomenemy4B3Y() );
 	enemyArray.push_back(enemy);
 
 
@@ -1272,16 +1602,16 @@ hpbar.setPosition(60, 33);
 	enemy.hp = 70;
 	enemy.enemyAttack = 0.3;
 
-	enemy.rect.setPosition({ 98, -4300 });
+	enemy.rect.setPosition(randomenemy1B4X(), randomenemy1B4Y());
 	enemyArray.push_back(enemy);
 
 
-	enemy.rect.setPosition({ 160, -4200 });
+	enemy.rect.setPosition(randomenemy2B4X(), randomenemy2B4Y());
 	enemyArray.push_back(enemy);
 
 
 
-	enemy.rect.setPosition({ 470, -4150 });
+	enemy.rect.setPosition(randomenemy3B4X(), randomenemy3B4Y());
 	enemyArray.push_back(enemy);
 
 
@@ -1383,7 +1713,7 @@ hpbar.setPosition(60, 33);
 			case sf::Event::TextEntered:
 				if (mode == 2) {
 					if (evnt.key.code == 13) {
-						filewriter.open("save.txt");
+						filewriter.open("save.txt", std ::ios ::out | std ::ios ::app);
 						cout << str << endl;
 						filewriter << str << "," << to_string(score) << "\n";
 						str = "";
@@ -1492,11 +1822,15 @@ hpbar.setPosition(60, 33);
 
 
 		if (player.rectfoot.getGlobalBounds().intersects(box1B2obj.getGlobalBounds())) {
-			player.sprite.setTexture(playerTexture1);
-			box1B2obj.setTexture(&box1B2objTexture1);
-			player.activeItem2 = player.iconobj4;
+			if ( keepbox1B2 == 0){
+				player.sprite.setTexture(playerTexture1);
+				box1B2obj.setTexture(&box1B2objTexture1);
+				player.activeItem2 = player.iconobj4;
 
-			
+				player.myHP = 60;
+				keepDef = 1;
+				keepbox1B2 = 1;
+			}
 		}
 
 
@@ -1514,25 +1848,68 @@ hpbar.setPosition(60, 33);
 
 
 		if (player.rectfoot.getGlobalBounds().intersects(redplus1B2obj.getGlobalBounds())) {
-			if (keepItem == 0 && stateChange == 0 ) {
+			if (keepredplusB2 == 0 && stateChange == 0 ) {
 				redplus1B2obj.setTexture(&redplus1B2objTexture1);
-				player.myHP += 10;
-				if (player.myHP >= 45)
+				player.myHP += 20;
+				if (player.myHP >= 45 && keepDef == 0)
 				{
 					player.myHP = 45;
 				}
-				keepItem = 1;
+
+				if (player.myHP >= 45 && keepDef == 1)
+				{
+					player.myHP = player.myHP;
+				}
+				if (player.myHP >= 60 && keepDef == 1)
+				{
+					player.myHP = 60;
+				}
+
+				keepredplusB2 = 1;
 				stateChange = 1;
 			}
 		}
 
 		if (player.rectfoot.getGlobalBounds().intersects(greenplus1B3obj.getGlobalBounds())) {
-			greenplus1B3obj.setTexture(&greenplus1B3objTexture1);
-			player.myHP = 45;
+			if (keepgreenplusB3 == 0) {
+
+				greenplus1B3obj.setTexture(&greenplus1B3objTexture1);
+				player.myHP = 60;
+				if (player.myHP >= 45 && keepDef == 0)
+				{
+					player.myHP = 45;
+				}
+
+				if (player.myHP >= 45 && keepDef == 1)
+				{
+					player.myHP = player.myHP;
+				}
+				if (player.myHP >= 60 && keepDef == 1)
+				{
+					player.myHP = 60;
+				}
+				keepgreenplusB3 = 1;
+			}
+
 		}
 		if (player.rectfoot.getGlobalBounds().intersects(redplus1F1obj.getGlobalBounds())) {
-			redplus1F1obj.setTexture(&redplus1F1objTexture1);
-			player.myHP += 30;
+			if(keepredplusF1 == 0){
+				redplus1F1obj.setTexture(&redplus1F1objTexture1);
+				player.myHP += 20;
+				if (player.myHP >= 45 && keepDef == 0)
+				{
+					player.myHP = 45;
+				}
+				if (player.myHP >= 45 && keepDef == 1)
+				{
+					player.myHP = player.myHP;
+				}
+				if (player.myHP >= 60 && keepDef == 1)
+				{
+					player.myHP = 60;
+				}
+				keepredplusF1 = 1;
+			}
 		}
 
 		if (player.rectfoot.getGlobalBounds().intersects(box1B1obj.getGlobalBounds())) {
@@ -1645,7 +2022,7 @@ hpbar.setPosition(60, 33);
 		
 		
 		
-		window.clear(sf::Color(0,0,0)); 
+		window.clear(sf::Color(190,190,190)); 
 
 		
 		if (mode == 0) {

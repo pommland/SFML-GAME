@@ -366,14 +366,18 @@ void Player::updateMovement(int *mode) {
 
 
 
-/*
+
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Y)) {
 		std::cout << rect.getPosition().x << " " << rect.getPosition().y << std::endl;
 
 	}
 
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::H)) {
+		std::cout << myHP << std::endl;
+
+	}
 	
-*/
+
 
 	
 
